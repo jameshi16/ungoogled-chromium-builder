@@ -17,10 +17,9 @@ change_directory ..
 $CP ungoogled-chromium-debian/debian $ROOT_DIRECTORY/src/
 change_directory $ROOT_DIRECTORY/src
 
-./debian/rules setup-debian
+./debian/scripts/setup debian
 
 $YES | $MK_BUILD_DEPS -i debian/control
 $RM ungoogled-chromium-build-deps_*.deb
 
-$GIT_AM /tmp/scripts/0001-fix-unicode.patch
-./debian/rules setup-local-src
+./debian/scripts/setup local-src

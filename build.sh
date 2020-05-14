@@ -4,15 +4,16 @@
 
 set -e
 
-IMAGE_VERSION="disco"
-GIT_TAG="ubuntu_disco"
+IMAGE_DISTRO="debian"
+IMAGE_VERSION="buster"
+GIT_TAG="debian_buster"
 
 clean() {
 	rm -rf ./output
 }
 
 build() {
-	docker build . -t "ungoogled-chromium:latest" --build-arg=IMAGE_VERSION=$IMAGE_VERSION --build-arg=GIT_TAG=$GIT_TAG
+	docker build . -t "ungoogled-chromium:latest" --build-arg=IMAGE_DISTRO=$IMAGE_DISTRO --build-arg=IMAGE_VERSION=$IMAGE_VERSION --build-arg=GIT_TAG=$GIT_TAG
 }
 
 extract() {
