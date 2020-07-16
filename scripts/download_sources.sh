@@ -22,4 +22,5 @@ change_directory $ROOT_DIRECTORY/src
 $YES | $MK_BUILD_DEPS -i debian/control
 $RM ungoogled-chromium-build-deps_*.deb
 
+$GIT_AM /tmp/scripts/0001-fix-unicode.patch
 ./debian/scripts/setup local-src

@@ -19,6 +19,7 @@ RUN scripts/get_prerequisites.sh
 
 # Step 3: Download & configure the sources
 COPY scripts/download_sources.sh scripts/download_sources.sh
+COPY scripts/0001-fix-unicode.patch scripts/0001-fix-unicode.patch
 RUN "scripts/download_sources.sh" $GIT_TAG
 
 # Step 4: Build sources
