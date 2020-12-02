@@ -1,4 +1,6 @@
-# Chromium Builder
+# Ungoogled Chromium Builder
+
+> **NOTE**: As of 01/12/2020, the official Ungoogled Software repository now has a branch called [unportable](https://github.com/ungoogled-software/ungoogled-chromium-debian/tree/unportable), which contains scripts to build Ungoogled Chromium targetting Debian-based systems on a Docker container. Henceforth, users should use the `unportable` branch to compile Ungoogled Chromium instead. This repository will be marked abandoned and archived on GitHub.
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
