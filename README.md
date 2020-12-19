@@ -1,15 +1,7 @@
 # Ungoogled Chromium Builder
 
-> **NOTE**: As of 01/12/2020, the official Ungoogled Software repository now has a branch called [unportable](https://github.com/ungoogled-software/ungoogled-chromium-debian/tree/unportable), which contains scripts to build Ungoogled Chromium targetting Debian-based systems on a Docker container. Henceforth, users should use the `unportable` branch to compile Ungoogled Chromium instead. This repository will be marked abandoned and archived on GitHub.
-
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-Builds `https://github.com/ungoogled-software/ungoogled-chromium-debian/` on a Docker Ubuntu container. This can be useful if you have a private server at home, and don't want to wait 99 years for it to build on your main machine.
+Builds the `unportable` branch of `https://github.com/ungoogled-software/ungoogled-chromium-debian/` on a Docker container. These scripts are deprecated in favor of https://github.com/ungoogled-software/ungoogled-chromium-debian/blob/unportable/docker-build.sh.
 
-## Changing to other Ubuntu versions
-
-You would need to change to other Ubuntu versions depending on your target platform, because libraries used to build Ungoogled Chromium varies from platform to platform. The easiest way is to check `build.sh`, where there are two environment variables that is used throughout the build script, called `IMAGE_VERSION` and `GIT_TAG`.
-
-`IMAGE_VERSION` is the Docker Ubuntu image tag to use when building Chromium. This should match your target release codename, which can be found with `lsb_release -c`. All image tags can be found [here](https://hub.docker.com/_/ubuntu/?tab=tags).
-
-`GIT_TAG` is the Git **branch** (yes, despite it's name) used by the `ungoogled-chromium-debian` repository. The list of branches can be found [here](https://github.com/ungoogled-software/ungoogled-chromium-debian/branches).
+> *NOTE*: The scripts don't work on Ubuntu 18.04 due to a version mismatch of the `libc6`. Either upgrade to the latest LTS release, or patch the `debian/control` file to install an earlier version of `libc6` for the Ungoogled Chromium build.

@@ -6,7 +6,7 @@ set -e
 
 IMAGE_DISTRO="debian"
 IMAGE_VERSION="buster"
-GIT_TAG="debian_buster"
+GIT_TAG="unportable"
 
 clean() {
 	rm -rf ./output

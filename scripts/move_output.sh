@@ -6,4 +6,4 @@ source /tmp/scripts/variables.sh
 change_directory $ROOT_DIRECTORY/output
 change_directory $ROOT_DIRECTORY
 
-$MV *.deb $ROOT_DIRECTORY/output
+$MV $ROOT_DIRECTORY/ungoogled-chromium-debian/*.deb $ROOT_DIRECTORY/output
