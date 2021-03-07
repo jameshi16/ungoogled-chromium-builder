@@ -12,7 +12,7 @@ Tested distributions:
 
 ## Changing to other Distros
 
-You would need to change to other Ubuntu versions depending on your target platform, because libraries used to build Ungoogled Chromium varies from platform to platform. The easiest way is to check `build.sh`, where there are two environment variables that is used throughout the build script, called `IMAGE_VERSION` and `GIT_TAG`.
+You would need to change to other Ubuntu versions depending on your target platform, because libraries used to build Ungoogled Chromium varies from platform to platform. The easiest way is to check `build.sh`, where there are two environment variables that is used throughout the build script, called `IMAGE_VERSION` and `IMAGE_DISTRO`.
 
 `IMAGE_DISTRO` is the distro. Currently only debian-based distros are theoretically supported.
 
@@ -26,6 +26,8 @@ Tested values:
 - Debian (Buster)
     - `IMAGE_DISTRO=debian`
     - `IMAGE_TAG=buster`
+
+> NOTE: Do not change `IMAGE_TAG`. `unportable` is the way forward for debian-based ungoogled-chromium builds.
 
 # License
 
